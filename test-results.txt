@@ -1,0 +1,350 @@
+# Результаты проверки
+
+Дата проверки (UTC): 2026-11-15 16:54:50
+Go: go version go1.25.5 darwin/arm64
+OS: Darwin 24.6.0 arm64
+
+## gofmt -l .
+OK: неформатированных файлов нет
+
+## go vet ./...
+OK
+
+## go test -v ./...
+?   	github.com/Yandex-Practicum/tracker/cmd/tracker	[no test files]
+=== RUN   TestInfo
+=== RUN   TestInfo/happy_path_-_single_item
+=== RUN   TestInfo/empty_dataset
+--- PASS: TestInfo (0.00s)
+    --- PASS: TestInfo/happy_path_-_single_item (0.00s)
+    --- PASS: TestInfo/empty_dataset (0.00s)
+PASS
+ok  	github.com/Yandex-Practicum/tracker/internal/actioninfo	(cached)
+=== RUN   TestDayStepsSuite
+=== RUN   TestDayStepsSuite/TestDayActionInfo
+=== RUN   TestDayStepsSuite/TestDayActionInfo/нормальная_нагрузка_-_один_час
+=== RUN   TestDayStepsSuite/TestDayActionInfo/нормальная_нагрузка_-_полчаса
+=== RUN   TestDayStepsSuite/TestDayActionInfo/высокая_нагрузка
+=== RUN   TestDayStepsSuite/TestDayActionInfo/низкая_нагрузка
+=== RUN   TestDayStepsSuite/TestDayActionInfo/другой_вес_и_рост
+=== RUN   TestDayStepsSuite/TestDayActionInfo/нулевые_шаги
+=== RUN   TestDayStepsSuite/TestDayActionInfo/отрицательные_шаги
+=== RUN   TestDayStepsSuite/TestDayActionInfo/нулевая_продолжительность
+=== RUN   TestDayStepsSuite/TestDayActionInfo/отрицательная_продолжительность
+=== RUN   TestDayStepsSuite/TestDayActionInfo/нулевой_вес
+=== RUN   TestDayStepsSuite/TestDayActionInfo/отрицательный_вес
+=== RUN   TestDayStepsSuite/TestDayActionInfo/нулевой_рост
+=== RUN   TestDayStepsSuite/TestDayActionInfo/отрицательный_рост
+=== RUN   TestDayStepsSuite/TestParsePackage
+=== RUN   TestDayStepsSuite/TestParsePackage/корректный_ввод
+=== RUN   TestDayStepsSuite/TestParsePackage/корректный_ввод_с_часами_и_минутами
+=== RUN   TestDayStepsSuite/TestParsePackage/положительное_число_с_плюсом
+=== RUN   TestDayStepsSuite/TestParsePackage/продолжительность_-_только_минуты
+=== RUN   TestDayStepsSuite/TestParsePackage/продолжительность_-_только_часы
+=== RUN   TestDayStepsSuite/TestParsePackage/продолжительность_-_дробные_часы
+=== RUN   TestDayStepsSuite/TestParsePackage/продолжительность_-_дробные_минуты
+=== RUN   TestDayStepsSuite/TestParsePackage/неверный_формат_-_неправильное_количество_параметров
+=== RUN   TestDayStepsSuite/TestParsePackage/неверный_формат_-_три_параметра
+=== RUN   TestDayStepsSuite/TestParsePackage/пустой_ввод
+=== RUN   TestDayStepsSuite/TestParsePackage/неверные_шаги_-_не_числовое_значение
+=== RUN   TestDayStepsSuite/TestParsePackage/неверные_шаги_-_ноль
+=== RUN   TestDayStepsSuite/TestParsePackage/неверные_шаги_-_отрицательное_значение
+=== RUN   TestDayStepsSuite/TestParsePackage/неверные_шаги_-_только_знак_минус
+=== RUN   TestDayStepsSuite/TestParsePackage/неверные_шаги_-_только_знак_плюс
+=== RUN   TestDayStepsSuite/TestParsePackage/неверные_шаги_-_пробелы_в_начале
+=== RUN   TestDayStepsSuite/TestParsePackage/неверные_шаги_-_пробелы_в_конце
+=== RUN   TestDayStepsSuite/TestParsePackage/неверные_шаги_-_некорректные_символы
+=== RUN   TestDayStepsSuite/TestParsePackage/неверный_формат_продолжительности
+=== RUN   TestDayStepsSuite/TestParsePackage/неверная_продолжительность_-_ноль
+=== RUN   TestDayStepsSuite/TestParsePackage/неверная_продолжительность_-_отрицательное_значение
+=== RUN   TestDayStepsSuite/TestParsePackage/неверная_продолжительность_-_отрицательные_минуты
+=== RUN   TestDayStepsSuite/TestParsePackage/неверная_продолжительность_-_неверная_единица_измерения
+=== RUN   TestDayStepsSuite/TestParsePackage/неверная_продолжительность_-_пробел_между_числом_и_единицей
+=== RUN   TestDayStepsSuite/TestParsePackage/неверная_продолжительность_-_пропущена_единица_измерения
+--- PASS: TestDayStepsSuite (0.00s)
+    --- PASS: TestDayStepsSuite/TestDayActionInfo (0.00s)
+        --- PASS: TestDayStepsSuite/TestDayActionInfo/нормальная_нагрузка_-_один_час (0.00s)
+        --- PASS: TestDayStepsSuite/TestDayActionInfo/нормальная_нагрузка_-_полчаса (0.00s)
+        --- PASS: TestDayStepsSuite/TestDayActionInfo/высокая_нагрузка (0.00s)
+        --- PASS: TestDayStepsSuite/TestDayActionInfo/низкая_нагрузка (0.00s)
+        --- PASS: TestDayStepsSuite/TestDayActionInfo/другой_вес_и_рост (0.00s)
+        --- PASS: TestDayStepsSuite/TestDayActionInfo/нулевые_шаги (0.00s)
+        --- PASS: TestDayStepsSuite/TestDayActionInfo/отрицательные_шаги (0.00s)
+        --- PASS: TestDayStepsSuite/TestDayActionInfo/нулевая_продолжительность (0.00s)
+        --- PASS: TestDayStepsSuite/TestDayActionInfo/отрицательная_продолжительность (0.00s)
+        --- PASS: TestDayStepsSuite/TestDayActionInfo/нулевой_вес (0.00s)
+        --- PASS: TestDayStepsSuite/TestDayActionInfo/отрицательный_вес (0.00s)
+        --- PASS: TestDayStepsSuite/TestDayActionInfo/нулевой_рост (0.00s)
+        --- PASS: TestDayStepsSuite/TestDayActionInfo/отрицательный_рост (0.00s)
+    --- PASS: TestDayStepsSuite/TestParsePackage (0.00s)
+        --- PASS: TestDayStepsSuite/TestParsePackage/корректный_ввод (0.00s)
+        --- PASS: TestDayStepsSuite/TestParsePackage/корректный_ввод_с_часами_и_минутами (0.00s)
+        --- PASS: TestDayStepsSuite/TestParsePackage/положительное_число_с_плюсом (0.00s)
+        --- PASS: TestDayStepsSuite/TestParsePackage/продолжительность_-_только_минуты (0.00s)
+        --- PASS: TestDayStepsSuite/TestParsePackage/продолжительность_-_только_часы (0.00s)
+        --- PASS: TestDayStepsSuite/TestParsePackage/продолжительность_-_дробные_часы (0.00s)
+        --- PASS: TestDayStepsSuite/TestParsePackage/продолжительность_-_дробные_минуты (0.00s)
+        --- PASS: TestDayStepsSuite/TestParsePackage/неверный_формат_-_неправильное_количество_параметров (0.00s)
+        --- PASS: TestDayStepsSuite/TestParsePackage/неверный_формат_-_три_параметра (0.00s)
+        --- PASS: TestDayStepsSuite/TestParsePackage/пустой_ввод (0.00s)
+        --- PASS: TestDayStepsSuite/TestParsePackage/неверные_шаги_-_не_числовое_значение (0.00s)
+        --- PASS: TestDayStepsSuite/TestParsePackage/неверные_шаги_-_ноль (0.00s)
+        --- PASS: TestDayStepsSuite/TestParsePackage/неверные_шаги_-_отрицательное_значение (0.00s)
+        --- PASS: TestDayStepsSuite/TestParsePackage/неверные_шаги_-_только_знак_минус (0.00s)
+        --- PASS: TestDayStepsSuite/TestParsePackage/неверные_шаги_-_только_знак_плюс (0.00s)
+        --- PASS: TestDayStepsSuite/TestParsePackage/неверные_шаги_-_пробелы_в_начале (0.00s)
+        --- PASS: TestDayStepsSuite/TestParsePackage/неверные_шаги_-_пробелы_в_конце (0.00s)
+        --- PASS: TestDayStepsSuite/TestParsePackage/неверные_шаги_-_некорректные_символы (0.00s)
+        --- PASS: TestDayStepsSuite/TestParsePackage/неверный_формат_продолжительности (0.00s)
+        --- PASS: TestDayStepsSuite/TestParsePackage/неверная_продолжительность_-_ноль (0.00s)
+        --- PASS: TestDayStepsSuite/TestParsePackage/неверная_продолжительность_-_отрицательное_значение (0.00s)
+        --- PASS: TestDayStepsSuite/TestParsePackage/неверная_продолжительность_-_отрицательные_минуты (0.00s)
+        --- PASS: TestDayStepsSuite/TestParsePackage/неверная_продолжительность_-_неверная_единица_измерения (0.00s)
+        --- PASS: TestDayStepsSuite/TestParsePackage/неверная_продолжительность_-_пробел_между_числом_и_единицей (0.00s)
+        --- PASS: TestDayStepsSuite/TestParsePackage/неверная_продолжительность_-_пропущена_единица_измерения (0.00s)
+PASS
+ok  	github.com/Yandex-Practicum/tracker/internal/daysteps	(cached)
+=== RUN   TestPrint
+=== RUN   TestPrint/стандартные_данные
+=== RUN   TestPrint/нулевые_значения
+=== RUN   TestPrint/дробные_значения
+=== RUN   TestPrint/большие_значения
+--- PASS: TestPrint (0.00s)
+    --- PASS: TestPrint/стандартные_данные (0.00s)
+    --- PASS: TestPrint/нулевые_значения (0.00s)
+    --- PASS: TestPrint/дробные_значения (0.00s)
+    --- PASS: TestPrint/большие_значения (0.00s)
+PASS
+ok  	github.com/Yandex-Practicum/tracker/internal/personaldata	(cached)
+=== RUN   TestSpentCaloriesSuite
+=== RUN   TestSpentCaloriesSuite/TestDistance
+=== RUN   TestSpentCaloriesSuite/TestDistance/нормальное_количество_шагов
+=== RUN   TestSpentCaloriesSuite/TestDistance/большое_количество_шагов
+=== RUN   TestSpentCaloriesSuite/TestDistance/маленькое_количество_шагов
+=== RUN   TestSpentCaloriesSuite/TestDistance/ноль_шагов
+=== RUN   TestSpentCaloriesSuite/TestMeanSpeed
+=== RUN   TestSpentCaloriesSuite/TestMeanSpeed/нормальная_скорость_-_один_час
+=== RUN   TestSpentCaloriesSuite/TestMeanSpeed/нормальная_скорость_-_полчаса
+=== RUN   TestSpentCaloriesSuite/TestMeanSpeed/нормальная_скорость_-_два_часа
+=== RUN   TestSpentCaloriesSuite/TestMeanSpeed/маленькая_скорость
+=== RUN   TestSpentCaloriesSuite/TestMeanSpeed/большая_скорость
+=== RUN   TestSpentCaloriesSuite/TestMeanSpeed/нулевая_продолжительность
+=== RUN   TestSpentCaloriesSuite/TestMeanSpeed/отрицательная_продолжительность
+=== RUN   TestSpentCaloriesSuite/TestMeanSpeed/ноль_шагов
+=== RUN   TestSpentCaloriesSuite/TestRunningSpentCalories
+=== RUN   TestSpentCaloriesSuite/TestRunningSpentCalories/нормальная_нагрузка_-_один_час
+=== RUN   TestSpentCaloriesSuite/TestRunningSpentCalories/нормальная_нагрузка_-_полчаса
+=== RUN   TestSpentCaloriesSuite/TestRunningSpentCalories/высокая_скорость
+=== RUN   TestSpentCaloriesSuite/TestRunningSpentCalories/низкая_скорость
+=== RUN   TestSpentCaloriesSuite/TestRunningSpentCalories/другой_вес
+=== RUN   TestSpentCaloriesSuite/TestRunningSpentCalories/нулевая_продолжительность
+=== RUN   TestSpentCaloriesSuite/TestRunningSpentCalories/отрицательная_продолжительность
+=== RUN   TestSpentCaloriesSuite/TestRunningSpentCalories/ноль_шагов
+=== RUN   TestSpentCaloriesSuite/TestRunningSpentCalories/отрицательные_шаги
+=== RUN   TestSpentCaloriesSuite/TestRunningSpentCalories/нулевой_вес
+=== RUN   TestSpentCaloriesSuite/TestRunningSpentCalories/отрицательный_вес
+=== RUN   TestSpentCaloriesSuite/TestRunningSpentCalories/отрицательный_рост
+=== RUN   TestSpentCaloriesSuite/TestWalkingSpentCalories
+=== RUN   TestSpentCaloriesSuite/TestWalkingSpentCalories/нормальная_нагрузка
+=== RUN   TestSpentCaloriesSuite/TestWalkingSpentCalories/меньше_шагов
+=== RUN   TestSpentCaloriesSuite/TestWalkingSpentCalories/больше_шагов
+=== RUN   TestSpentCaloriesSuite/TestWalkingSpentCalories/другой_вес
+=== RUN   TestSpentCaloriesSuite/TestWalkingSpentCalories/другой_рост
+=== RUN   TestSpentCaloriesSuite/TestWalkingSpentCalories/нулевые_шаги
+=== RUN   TestSpentCaloriesSuite/TestWalkingSpentCalories/отрицательные_шаги
+=== RUN   TestSpentCaloriesSuite/TestWalkingSpentCalories/нулевой_вес
+=== RUN   TestSpentCaloriesSuite/TestWalkingSpentCalories/отрицательный_вес
+=== RUN   TestSpentCaloriesSuite/TestWalkingSpentCalories/нулевой_рост
+=== RUN   TestSpentCaloriesSuite/TestWalkingSpentCalories/отрицательный_рост
+--- PASS: TestSpentCaloriesSuite (0.00s)
+    --- PASS: TestSpentCaloriesSuite/TestDistance (0.00s)
+        --- PASS: TestSpentCaloriesSuite/TestDistance/нормальное_количество_шагов (0.00s)
+        --- PASS: TestSpentCaloriesSuite/TestDistance/большое_количество_шагов (0.00s)
+        --- PASS: TestSpentCaloriesSuite/TestDistance/маленькое_количество_шагов (0.00s)
+        --- PASS: TestSpentCaloriesSuite/TestDistance/ноль_шагов (0.00s)
+    --- PASS: TestSpentCaloriesSuite/TestMeanSpeed (0.00s)
+        --- PASS: TestSpentCaloriesSuite/TestMeanSpeed/нормальная_скорость_-_один_час (0.00s)
+        --- PASS: TestSpentCaloriesSuite/TestMeanSpeed/нормальная_скорость_-_полчаса (0.00s)
+        --- PASS: TestSpentCaloriesSuite/TestMeanSpeed/нормальная_скорость_-_два_часа (0.00s)
+        --- PASS: TestSpentCaloriesSuite/TestMeanSpeed/маленькая_скорость (0.00s)
+        --- PASS: TestSpentCaloriesSuite/TestMeanSpeed/большая_скорость (0.00s)
+        --- PASS: TestSpentCaloriesSuite/TestMeanSpeed/нулевая_продолжительность (0.00s)
+        --- PASS: TestSpentCaloriesSuite/TestMeanSpeed/отрицательная_продолжительность (0.00s)
+        --- PASS: TestSpentCaloriesSuite/TestMeanSpeed/ноль_шагов (0.00s)
+    --- PASS: TestSpentCaloriesSuite/TestRunningSpentCalories (0.00s)
+        --- PASS: TestSpentCaloriesSuite/TestRunningSpentCalories/нормальная_нагрузка_-_один_час (0.00s)
+        --- PASS: TestSpentCaloriesSuite/TestRunningSpentCalories/нормальная_нагрузка_-_полчаса (0.00s)
+        --- PASS: TestSpentCaloriesSuite/TestRunningSpentCalories/высокая_скорость (0.00s)
+        --- PASS: TestSpentCaloriesSuite/TestRunningSpentCalories/низкая_скорость (0.00s)
+        --- PASS: TestSpentCaloriesSuite/TestRunningSpentCalories/другой_вес (0.00s)
+        --- PASS: TestSpentCaloriesSuite/TestRunningSpentCalories/нулевая_продолжительность (0.00s)
+        --- PASS: TestSpentCaloriesSuite/TestRunningSpentCalories/отрицательная_продолжительность (0.00s)
+        --- PASS: TestSpentCaloriesSuite/TestRunningSpentCalories/ноль_шагов (0.00s)
+        --- PASS: TestSpentCaloriesSuite/TestRunningSpentCalories/отрицательные_шаги (0.00s)
+        --- PASS: TestSpentCaloriesSuite/TestRunningSpentCalories/нулевой_вес (0.00s)
+        --- PASS: TestSpentCaloriesSuite/TestRunningSpentCalories/отрицательный_вес (0.00s)
+        --- PASS: TestSpentCaloriesSuite/TestRunningSpentCalories/отрицательный_рост (0.00s)
+    --- PASS: TestSpentCaloriesSuite/TestWalkingSpentCalories (0.00s)
+        --- PASS: TestSpentCaloriesSuite/TestWalkingSpentCalories/нормальная_нагрузка (0.00s)
+        --- PASS: TestSpentCaloriesSuite/TestWalkingSpentCalories/меньше_шагов (0.00s)
+        --- PASS: TestSpentCaloriesSuite/TestWalkingSpentCalories/больше_шагов (0.00s)
+        --- PASS: TestSpentCaloriesSuite/TestWalkingSpentCalories/другой_вес (0.00s)
+        --- PASS: TestSpentCaloriesSuite/TestWalkingSpentCalories/другой_рост (0.00s)
+        --- PASS: TestSpentCaloriesSuite/TestWalkingSpentCalories/нулевые_шаги (0.00s)
+        --- PASS: TestSpentCaloriesSuite/TestWalkingSpentCalories/отрицательные_шаги (0.00s)
+        --- PASS: TestSpentCaloriesSuite/TestWalkingSpentCalories/нулевой_вес (0.00s)
+        --- PASS: TestSpentCaloriesSuite/TestWalkingSpentCalories/отрицательный_вес (0.00s)
+        --- PASS: TestSpentCaloriesSuite/TestWalkingSpentCalories/нулевой_рост (0.00s)
+        --- PASS: TestSpentCaloriesSuite/TestWalkingSpentCalories/отрицательный_рост (0.00s)
+PASS
+ok  	github.com/Yandex-Practicum/tracker/internal/spentenergy	(cached)
+=== RUN   TestSpentCaloriesSuite
+=== RUN   TestSpentCaloriesSuite/TestActionInfo
+=== RUN   TestSpentCaloriesSuite/TestActionInfo/ходьба_-_нормальная_нагрузка
+=== RUN   TestSpentCaloriesSuite/TestActionInfo/бег_-_нормальная_нагрузка
+=== RUN   TestSpentCaloriesSuite/TestActionInfo/ходьба_-_высокая_скорость
+=== RUN   TestSpentCaloriesSuite/TestActionInfo/бег_-_высокая_скорость
+=== RUN   TestSpentCaloriesSuite/TestActionInfo/ходьба_-_другой_вес_и_рост
+=== RUN   TestSpentCaloriesSuite/TestActionInfo/бег_-_другой_вес
+=== RUN   TestSpentCaloriesSuite/TestActionInfo/ходьба_-_полчаса
+=== RUN   TestSpentCaloriesSuite/TestActionInfo/бег_-_полчаса
+=== RUN   TestSpentCaloriesSuite/TestActionInfo/неизвестный_тип_тренировки
+=== RUN   TestSpentCaloriesSuite/TestParseTraining
+=== RUN   TestSpentCaloriesSuite/TestParseTraining/корректный_ввод_с_часами_и_минутами
+=== RUN   TestSpentCaloriesSuite/TestParseTraining/корректный_ввод_с_минутами
+=== RUN   TestSpentCaloriesSuite/TestParseTraining/положительное_число_с_плюсом
+=== RUN   TestSpentCaloriesSuite/TestParseTraining/продолжительность_-_только_минуты
+=== RUN   TestSpentCaloriesSuite/TestParseTraining/продолжительность_-_только_часы
+=== RUN   TestSpentCaloriesSuite/TestParseTraining/продолжительность_-_дробные_часы
+=== RUN   TestSpentCaloriesSuite/TestParseTraining/продолжительность_-_дробные_минуты
+=== RUN   TestSpentCaloriesSuite/TestParseTraining/неверный_формат_-_неправильное_количество_параметров
+=== RUN   TestSpentCaloriesSuite/TestParseTraining/неверный_формат_-_четыре_параметра
+=== RUN   TestSpentCaloriesSuite/TestParseTraining/пустой_ввод
+=== RUN   TestSpentCaloriesSuite/TestParseTraining/неверные_шаги_-_не_числовое_значение
+=== RUN   TestSpentCaloriesSuite/TestParseTraining/неверные_шаги_-_ноль
+=== RUN   TestSpentCaloriesSuite/TestParseTraining/неверные_шаги_-_отрицательное_значение
+=== RUN   TestSpentCaloriesSuite/TestParseTraining/неверные_шаги_-_только_знак_минус
+=== RUN   TestSpentCaloriesSuite/TestParseTraining/неверные_шаги_-_только_знак_плюс
+=== RUN   TestSpentCaloriesSuite/TestParseTraining/неверный_формат_продолжительности
+=== RUN   TestSpentCaloriesSuite/TestParseTraining/неверная_продолжительность_-_ноль
+=== RUN   TestSpentCaloriesSuite/TestParseTraining/неверная_продолжительность_-_отрицательное_значение
+=== RUN   TestSpentCaloriesSuite/TestParseTraining/неверная_продолжительность_-_отрицательные_минуты
+=== RUN   TestSpentCaloriesSuite/TestParseTraining/неверная_продолжительность_-_неверная_единица_измерения
+=== RUN   TestSpentCaloriesSuite/TestParseTraining/неверная_продолжительность_-_пробел_между_числом_и_единицей
+=== RUN   TestSpentCaloriesSuite/TestParseTraining/неверная_продолжительность_-_пропущена_единица_измерения
+--- PASS: TestSpentCaloriesSuite (0.00s)
+    --- PASS: TestSpentCaloriesSuite/TestActionInfo (0.00s)
+        --- PASS: TestSpentCaloriesSuite/TestActionInfo/ходьба_-_нормальная_нагрузка (0.00s)
+        --- PASS: TestSpentCaloriesSuite/TestActionInfo/бег_-_нормальная_нагрузка (0.00s)
+        --- PASS: TestSpentCaloriesSuite/TestActionInfo/ходьба_-_высокая_скорость (0.00s)
+        --- PASS: TestSpentCaloriesSuite/TestActionInfo/бег_-_высокая_скорость (0.00s)
+        --- PASS: TestSpentCaloriesSuite/TestActionInfo/ходьба_-_другой_вес_и_рост (0.00s)
+        --- PASS: TestSpentCaloriesSuite/TestActionInfo/бег_-_другой_вес (0.00s)
+        --- PASS: TestSpentCaloriesSuite/TestActionInfo/ходьба_-_полчаса (0.00s)
+        --- PASS: TestSpentCaloriesSuite/TestActionInfo/бег_-_полчаса (0.00s)
+        --- PASS: TestSpentCaloriesSuite/TestActionInfo/неизвестный_тип_тренировки (0.00s)
+    --- PASS: TestSpentCaloriesSuite/TestParseTraining (0.00s)
+        --- PASS: TestSpentCaloriesSuite/TestParseTraining/корректный_ввод_с_часами_и_минутами (0.00s)
+        --- PASS: TestSpentCaloriesSuite/TestParseTraining/корректный_ввод_с_минутами (0.00s)
+        --- PASS: TestSpentCaloriesSuite/TestParseTraining/положительное_число_с_плюсом (0.00s)
+        --- PASS: TestSpentCaloriesSuite/TestParseTraining/продолжительность_-_только_минуты (0.00s)
+        --- PASS: TestSpentCaloriesSuite/TestParseTraining/продолжительность_-_только_часы (0.00s)
+        --- PASS: TestSpentCaloriesSuite/TestParseTraining/продолжительность_-_дробные_часы (0.00s)
+        --- PASS: TestSpentCaloriesSuite/TestParseTraining/продолжительность_-_дробные_минуты (0.00s)
+        --- PASS: TestSpentCaloriesSuite/TestParseTraining/неверный_формат_-_неправильное_количество_параметров (0.00s)
+        --- PASS: TestSpentCaloriesSuite/TestParseTraining/неверный_формат_-_четыре_параметра (0.00s)
+        --- PASS: TestSpentCaloriesSuite/TestParseTraining/пустой_ввод (0.00s)
+        --- PASS: TestSpentCaloriesSuite/TestParseTraining/неверные_шаги_-_не_числовое_значение (0.00s)
+        --- PASS: TestSpentCaloriesSuite/TestParseTraining/неверные_шаги_-_ноль (0.00s)
+        --- PASS: TestSpentCaloriesSuite/TestParseTraining/неверные_шаги_-_отрицательное_значение (0.00s)
+        --- PASS: TestSpentCaloriesSuite/TestParseTraining/неверные_шаги_-_только_знак_минус (0.00s)
+        --- PASS: TestSpentCaloriesSuite/TestParseTraining/неверные_шаги_-_только_знак_плюс (0.00s)
+        --- PASS: TestSpentCaloriesSuite/TestParseTraining/неверный_формат_продолжительности (0.00s)
+        --- PASS: TestSpentCaloriesSuite/TestParseTraining/неверная_продолжительность_-_ноль (0.00s)
+        --- PASS: TestSpentCaloriesSuite/TestParseTraining/неверная_продолжительность_-_отрицательное_значение (0.00s)
+        --- PASS: TestSpentCaloriesSuite/TestParseTraining/неверная_продолжительность_-_отрицательные_минуты (0.00s)
+        --- PASS: TestSpentCaloriesSuite/TestParseTraining/неверная_продолжительность_-_неверная_единица_измерения (0.00s)
+        --- PASS: TestSpentCaloriesSuite/TestParseTraining/неверная_продолжительность_-_пробел_между_числом_и_единицей (0.00s)
+        --- PASS: TestSpentCaloriesSuite/TestParseTraining/неверная_продолжительность_-_пропущена_единица_измерения (0.00s)
+PASS
+ok  	github.com/Yandex-Practicum/tracker/internal/trainings	(cached)
+
+## go build ./...
+OK
+
+## go run ./cmd/tracker
+Активность в течение дня
+Имя: Витя
+Вес: 84.60
+Рост: 1.87
+Количество шагов: 678.
+Дистанция составила 0.57 км.
+Вы сожгли 24.13 ккал.
+
+Количество шагов: 792.
+Дистанция составила 0.67 км.
+Вы сожгли 28.19 ккал.
+
+Количество шагов: 1078.
+Дистанция составила 0.91 км.
+Вы сожгли 38.37 ккал.
+
+Количество шагов: 7830.
+Дистанция составила 6.59 км.
+Вы сожгли 278.71 ккал.
+
+2026/11/15 19:54:51 ошибка парсинга данных ",3456": не удалось преобразовать количество шагов: strconv.Atoi: parsing "": invalid syntax
+2026/11/15 19:54:51 ошибка парсинга данных "12:40:00, 3456": не удалось преобразовать количество шагов: strconv.Atoi: parsing "12:40:00": invalid syntax
+2026/11/15 19:54:51 ошибка парсинга данных "something is wrong": неверный формат данных: ожидалось 2 поля, получено 1
+Журнал тренировок
+Имя: Витя
+Вес: 84.60
+Рост: 1.87
+Тип тренировки: Ходьба
+Длительность: 3.00 ч.
+Дистанция: 2.91 км.
+Скорость: 0.97 км/ч
+Сожгли калорий: 123.02
+
+2026/11/15 19:54:51 ошибка парсинга данных "something is wrong": неверный формат данных: ожидалось 3 поля, получено 1
+Тип тренировки: Бег
+Длительность: 0.08 ч.
+Дистанция: 0.57 км.
+Скорость: 6.85 км/ч
+Сожгли калорий: 48.27
+
+Тип тренировки: Бег
+Длительность: 0.17 ч.
+Дистанция: 0.91 км.
+Скорость: 5.44 км/ч
+Сожгли калорий: 76.74
+
+2026/11/15 19:54:51 ошибка парсинга данных ",3456 Ходьба": неверный формат данных: ожидалось 3 поля, получено 2
+Тип тренировки: Ходьба
+Длительность: 3.17 ч.
+Дистанция: 6.64 км.
+Скорость: 2.10 км/ч
+Сожгли калорий: 280.92
+
+Тип тренировки: Бег
+Длительность: 0.75 ч.
+Дистанция: 12.95 км.
+Скорость: 17.27 км/ч
+Сожгли калорий: 1095.77
+
+
+## go test -cover ./...
+	github.com/Yandex-Practicum/tracker/cmd/tracker		coverage: 0.0% of statements
+ok  	github.com/Yandex-Practicum/tracker/internal/actioninfo	(cached)	coverage: 55.6% of statements
+ok  	github.com/Yandex-Practicum/tracker/internal/daysteps	(cached)	coverage: 100.0% of statements
+ok  	github.com/Yandex-Practicum/tracker/internal/personaldata	(cached)	coverage: 100.0% of statements
+ok  	github.com/Yandex-Practicum/tracker/internal/spentenergy	(cached)	coverage: 100.0% of statements
+ok  	github.com/Yandex-Practicum/tracker/internal/trainings	(cached)	coverage: 96.3% of statements
+
+## go test -count=1 ./... (финальный прогон без кеша)
+?   	github.com/Yandex-Practicum/tracker/cmd/tracker	[no test files]
+ok  	github.com/Yandex-Practicum/tracker/internal/actioninfo	0.321s
+ok  	github.com/Yandex-Practicum/tracker/internal/daysteps	0.607s
+ok  	github.com/Yandex-Practicum/tracker/internal/personaldata	0.756s
+ok  	github.com/Yandex-Practicum/tracker/internal/spentenergy	0.456s
+ok  	github.com/Yandex-Practicum/tracker/internal/trainings	0.912s
